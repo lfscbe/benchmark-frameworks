@@ -40,7 +40,7 @@ services:
       <<: *env
     restart: unless-stopped
     profiles:
-      - multi-restricted
+      - multi-unrestricted
 
   app-multi-instance-2-unrestricted:
     <<: *app-multi-instance-1-unrestricted
