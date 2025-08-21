@@ -18,6 +18,25 @@ Os profiles estão padronizados da seguinte maneira:
 - `compose.yaml`: Que conterá o docker compose com os profiles acima.
 
 </br>
+
+## Resultados dos benchmarks
+
+Estes são os resultados rodando o `autocannon` por 60s.
+
+| Projeto | Profile | Flags | Latencia Avg. (ms) | Avg. Req. Sec |
+| -- | -- | -- | -- | -- |
+| react-router-fastify (default) | single-unrestricted | - | 0.45 ms | 10.008,64 |
+| react-router-fastify (default) | single-restricted | `instance: [0.25] [0.3G]` | 3.2 ms | 2.659,79 |
+| react-router-fastify (default) | multi-unrestricted | - | 41.93ms | 1.510,1 |
+| react-router-fastify (default) | multi-restricted | `instance: [0.25] [0.3G]` `nginx: [0.05] [0.2G]` | 76.92 ms | 129,1 |
+| - | - | - | - | - |
+| fastify (default) | single-unrestricted | - | 0.25 ms | 12.051,24 |
+| fastify (default) | single-restricted | `instance: [0.25] [0.3G]` | 2.94 ms | 2.843,84 |
+| fastify (default) | multi-unrestricted | - | 43.13 ms | 1.875,5 |
+| fastify (default) | multi-restricted | `instance: [0.25] [0.3G]` `nginx: [0.05] [0.2G]` | 81.2 ms | 122,2 |
+| fastify (default) | multi-restricted | `instance: [0.25] [0.3G]` `nginx: [0.75] [0.2G]` | 41.8 ms | 1.068,41 |
+
+</br>
 </br>
 
 # Setup containers
