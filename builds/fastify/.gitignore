@@ -1,0 +1,6 @@
+/*
+!.gitignore
+!compose.yaml
+!package.json
+!Dockerfile
+!/src

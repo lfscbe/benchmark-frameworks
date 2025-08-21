@@ -45,3 +45,8 @@ fi
 if [[ "$PROJECT" == "react-router-fastify" ]]; then
 	autocannon -d 60 http://localhost:$PORT/api/users
 fi
+
+# Run autocannon for fastify
+if [[ "$PROJECT" == "fastify" ]]; then
+	autocannon -d 60 http://localhost:$PORT
+fi
